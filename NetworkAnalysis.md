@@ -13,40 +13,28 @@ You must inspect your traffic capture to answer the following questions:
 
 The domain name is **Frank-n-Ted-DC.frank-n-ted.com**.
 
-Filter: `ip.addr==10.6.12.0/24`
-
-Results Screenshot:
-
-![Pcap domain name]
-
 2. **What is the IP address of the Domain Controller (DC) of the AD network?**
 
 IP address is **10.6.12.12** (Frank-n-Ted-DC.frank-n-ted.com)
 
-Filter: `ip.addr==10.6.12.0/24`
-
 Results Screenshot of Protocol Info:
 
-![Pcap IP address of domain controller]
+![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/DCIP.png)
 
 3. **What is the name of the malware downloaded to the 10.6.12.203 machine? Once you have found the file, export it to your Kali machine's desktop.**
 
 Malware file is **june11.dll**.
 
-Filter: `ip.addr==10.16.12.203 and http.request.method==GET`
-
-Export: File > Export Objects > HTTP...
-
 Results Screenshot:
 
-![Pcap of june11.dll malware]
+![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/malwarefile.png)
 
 4. **Upload the file to VirusTotal.com. What kind of malware is this classified as?**
 This type of malware is classified as a **Trojan**.
 
 VirusTotal Analysis Screenshot:
 
-![Virus Total june11.dll scan results]
+![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/virustotal.png)
 
 ### Vulnerable Windows Machines
 The Security team received reports of an infected Windows host on the network. They know the following:
@@ -56,44 +44,28 @@ The Security team received reports of an infected Windows host on the network. T
 - The DC for this network lives at 172.16.4.4 and is named Mind-Hammer-DC.
 - The network has standard gateway and broadcast addresses.
 
-Inspect your traffic to answer the following questions:
-
 1. **Find the following information about the infected Windows machine:**
     - Host name: **ROTTERDAM-PC**
     - IP address: **172.16.4.205**
     - MAC address: **00:59:07:b0:63:a4**
 
-Filter: `ip.src==172.16.4.4 and kerberos.CNameString`
-
 Results Screenshot:
 
-![Pcap infected Windows machine]
+![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/infectedwindowshost.png)
 
 2. **What is the username of the Windows user whose computer is infected?**
 The username is **matthijs.devries**.
 
-Filter: `ip.src==172.16.4.205 and kerberos.CNameString`
-
 Results Screenshot:
 
-![Pcap username of infected windows machine]
+![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/windowsuser.png)
 
 3. **What are the IP addresses used in the actual infection traffic?**
 Based on the Conversations statistics and then filtering by the highest amount packets between IPs, **172.16.4.205, 185.243.115.84, 166.62.11.64 are the infected traffic**.
 
-Referencing 185.243.115.84 (b569023.green.mattingsolutions.co) there is a large amount of POST methods of empty.gif being sent without any originating GET request. This is suspicious and odd.
-
-Statistics > Conversations > IPv4 (tab) > Packets (high to low)
-
-Filter: `ip.addr==172.16.4.205 and ip.addr==185.243.115.84`
-
 Results screenshot:
 
-![Pcap IP of infected traffic]
-
-4. **As a bonus, retrieve the desktop background of the Windows host.**
-
-![Desktop background of Windows host]
+![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/infectiontraffic.png)
 
 ### Illegal Downloads
 IT was informed that some users are torrenting on the network. The Security team does not forbid the use of torrents for legitimate purposes, such as downloading operating systems. However, they have a strict policy against copyright infringement.
@@ -110,17 +82,14 @@ Your task is to isolate torrent traffic and answer the following questions:
 - Windows username: **elmer.blanco**
 - Host Name (OS version): **BLANCO-DESKTOP**
 
-Filter: `ip.src==10.0.0.201 and kerberos.CNameString`
-
 Results Screenshot:
 
-![IP 10.0.0.201 (elmer.blanco machine)]
+![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/elmer.png)
+
 
 2. **Which torrent file did the user download?**
 The torrent file is **Betty_Boop_Rythm_on_the_Reservation.avi.torrent**.
 
-Filter: `ip.addr==10.0.0.201 and http.request.method==GET`
+Results screenshot:
 
-*OR* `ip.addr==10.0.0.201 and (http.request.uri contains “.torrent”)`
-
-![Pcap torrent file]
+![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/bettyboop.png)
