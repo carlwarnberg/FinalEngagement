@@ -55,7 +55,7 @@ This scan identifies the services below as potential points of entry:
 - Port 22/TCP 	Open 	SSH	OpenSSH 6.7p1 Debian 5+deb8u4
 - Port 80/TCP 	Open 	HTTP	Apache httpd 2.4.10 (Debian)
 
-![Nmap scan](/Images/Nmap scan.png "Nmap scan")
+![Nmap scan](/Images/Nmapscan.png "Nmap scan")
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
