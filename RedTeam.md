@@ -54,10 +54,10 @@ The Red Team was able to penetrate Target 1 and retrieve the following confident
 
         - Commands:
     
-        - `$ ssh michael@192.168.1.110
-        - `$ password: michael'
-        - `$ cd /var/www/html'
-        - `$ cat service.html'
+        - `$ ssh michael@192.168.1.110`
+        - `$ password: michael`
+        - `$ cd /var/www/html`
+        - `$ cat service.html`
         
 ![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/Flag1.png)
 
@@ -85,8 +85,8 @@ The Red Team was able to penetrate Target 1 and retrieve the following confident
         - I was able to find Flags 3 and 4 using the steps below
         - Commands:
 
-         - `mysql -u -p
-         - `password: R@v3nSecurity' 
+         - `mysql -u -p`
+         - `password: R@v3nSecurity`
          - `show databases;`
          - `use wordpress;` 
          - `show tables;`
