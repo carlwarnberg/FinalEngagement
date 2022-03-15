@@ -72,7 +72,7 @@ The Red Team was able to penetrate Target 1 and retrieve the following confident
         - `cd ../` 
         - `cd ../`
         - `cd var/www`
-        - `ls'
+        - `ls`
         - `cat flag2.txt`
 
 ![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/Flag2.png) 
