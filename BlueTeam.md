@@ -47,8 +47,6 @@ Traffic to these services should be carefully monitored. To this end, we have im
 
 **Excessive HTTP Errors**
 
-Excessive HTTP Errors is implemented as follows:
-
 `WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes`
 
 -  Metric: 
@@ -64,8 +62,6 @@ Excessive HTTP Errors is implemented as follows:
 
 **HTTP Request Size Monitor**
 
-HTTP Request Size Monitor is implemented as follows:
-
 `WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute`
 
 - Metric: 
@@ -80,8 +76,6 @@ HTTP Request Size Monitor is implemented as follows:
 ![alt text](https://github.com/carlwarnberg/Project-3/blob/main/Images/HTTP-Request-size-alert.png)
 
 **CPU Usage Monitor**
-
-CPU Usage Monitor is implemented as follows:
 
 `WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes`
 
