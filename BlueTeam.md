@@ -42,10 +42,6 @@ The following machines were identified on the network:
 - IP Address: 
     - 192.168.1.105
 
-**Network Diagram:**
-
-![Network Diagram]
-
 ### Description of Targets
 
 - Two VMs on the network were vulnerable to attack: Target 1 (192.168.1.110) and Target 2 (192.168.1.115). However, only Target 1 is covered and was attacked.
@@ -59,7 +55,7 @@ This scan identifies the services below as potential points of entry:
 - Port 22/TCP 	Open 	SSH	OpenSSH 6.7p1 Debian 5+deb8u4
 - Port 80/TCP 	Open 	HTTP	Apache httpd 2.4.10 (Debian)
 
-![Nmap Target 1 Ports](/Images/nmap-target1-ports.png "Nmap Target 1 Ports")
+![Nmap scan](/Images/Nmap scan.png "Nmap scan")
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
