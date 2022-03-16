@@ -1,5 +1,3 @@
-# Project-3: Final Engagement
-
 ### Description
 
 In a similar vein to Project 2, in this third and final project, we were tasked with performing the duties of a Red Team pen tester and a Blue Team SOC analyst, with the added wrinkle of inspecting network traffic using Wireshark. 
